@@ -1,5 +1,6 @@
 <?php
-define('Web_Name','Ctcms管理系统'); //站点名称  
+if ( ! defined('BASEPATH')) exit('fuck you');
+define('Web_Name','3CCC'); //站点名称  
 define('Web_Url','vv.com'); //站点域名  
 define('Web_Path','/'); //站点路径  
 define('Web_Off',0);  //网站开关  
@@ -7,12 +8,12 @@ define('Web_Onneir','网站升级维护中，给大家带来不便，请谅解..
 define('Web_Mode',2);  //网站运行模式  
 define('Web_Icp','沪ICP备06000000号');  //网站ICP  
 define('Web_Count','统计代码');  //统计代码  
-define('Web_Title','Ctcms视频系统'); //SEO-标题  
-define('Web_Keywords','Ctcms视频系统'); //SEO-Keywords  
-define('Web_Description','Ctcms视频系统'); //SEO-description  
+define('Web_Title','3CCC电影网站'); //SEO-标题  
+define('Web_Keywords','电影网站'); //SEO-Keywords  
+define('Web_Description','电影网站'); //SEO-description  
 define('Web_Skin','default'); //网站默认模板  
 define('Admin_QQ','157503886');  //站长QQ  
-define('Admin_Mail','admin@ctcms.cn');  //站长EMAIL  
+define('Admin_Mail','');  //站长EMAIL  
 define('Admin_Code','qwe123');  //后台验证码  
 define('Admin_Log_Day',30);  //后台登陆日志保存天数  
 define('Admin_Log_Ip','');  //允许访问后台的IP列表  

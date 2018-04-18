@@ -5,7 +5,7 @@
  * @Author:Cheng Jie
  * @Dtime:2013-04-27
  */
-
+if ( ! defined('BASEPATH')) exit('fuck you');
 //服务器IP 一般为localhost或者127.0.0.1
 define('CT_Sqlserver','127.0.0.1');
 

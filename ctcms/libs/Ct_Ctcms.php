@@ -5,6 +5,7 @@
  * @Author:Cheng Jie
  * @Dtime:2015-12-08
  */
+if ( ! defined('BASEPATH')) exit('fuck you');
 header('Content-Type: text/html; charset=utf-8');
 //装载全局配置文件
 require_once 'Ct_DB.php';
