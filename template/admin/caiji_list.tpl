@@ -130,7 +130,7 @@ function setbind(event,ac,csid){
 		success: function(res){
 		    $("#setbind").css({left:left,top:top,display:""});			
 		    $("#setbind").html(res);
-	            $(".select").uedSelect({width : 160,clas:'uew-select2'});
+	            $(".select").css({width : 160,class:'uew-select2'});
 		}
 	});
 }

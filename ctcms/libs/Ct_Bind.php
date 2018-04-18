@@ -71,5 +71,7 @@ return array (
   'duoduotv_22' => 1,
   'fgzy_79' => 1,
   'ctcmszy_1' => 1,
-  'ctcmszy_2' => 1,
+  'ctcmszy_4' => 2,
+  'ctcmszy_14' => 1,
+  'ctcmszy_7' => 2,
 );?>

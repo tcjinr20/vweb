@@ -109,8 +109,20 @@
 			<div class="col-2"> </div>
 		</div>
 		<div class="row cl">
+			<label class="form-label col-2">种子：</label>
+			<div class="formControls col-8">
+				<span class="select-box" style="width:80px;">
+				<select class="select" name="torrent" size="1">
+					<option value="1"<?php if($torrent==1) echo ' selected';?>>是</option>
+					<option value="0"<?php if($torrent==0) echo ' selected';?>>不是</option>
+				</select>
+			</span>
+			</div>
+			<div class="col-2"> </div>
+		</div>
+		<div class="row cl">
 			<label class="form-label col-2">
-			播放地址：<br><br>
+			播放器：<br><br>
 			<input style="width:70px;" type="button" class="input-text addzu" value="+增加组">
 			</label>
 			<div class="formControls col-8" id="player">
@@ -171,6 +183,7 @@ for($i=0;$i<count($arr);$i++){
 <script type="text/javascript" src="<?=Base_Path?>editor/kindeditor.js"></script> 
 <script type="text/javascript">
 $(function(){
+	$('.torrent').select($('.torrent').val());
     var zid=<?=$i?>;
     $("#form-admin-add").Validform({tiptype:2});
     //增加组

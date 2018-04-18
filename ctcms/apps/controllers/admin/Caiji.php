@@ -76,7 +76,6 @@ class Caiji extends Ctcms_Controller {
 			              $vod='';
 			              preg_match_all('/<video><last>([\s\S]*?)<\/last><id>([0-9]+)<\/id><tid>([0-9]+)<\/tid><name><\!\[CDATA\[([\s\S]*?)\]\]><\/name><type>([\s\S]*?)<\/type><pic>([\s\S]*?)<\/pic><lang>([\s\S]*?)<\/lang><area>([\s\S]*?)<\/area><year>([\s\S]*?)<\/year><state>([\s\S]*?)<\/state><note><\!\[CDATA\[([\s\S]*?)\]\]><\/note><actor><\!\[CDATA\[([\s\S]*?)\]\]><\/actor><director><\!\[CDATA\[([\s\S]*?)\]\]><\/director><dl>([\s\S]*?)<\/dl><des><\!\[CDATA\[([\s\S]*?)\]\]><\/des>([\s\S]*?)<\/video>/',$strs,$vod_array);
                           $s=1;
-						  //print_r($vod_array);exit($strs);
 			              foreach($vod_array[1] as $key=>$value){
 
                                   $p=($pageindex-1)*$pagesize+$s;
@@ -163,11 +162,12 @@ class Caiji extends Ctcms_Controller {
                                   //判断绑定
 			                      $val=arr_key_value($LIST,$ac.'_'.$vod_array[3][$key]);
 			                      if(!$val){
-
+//
 			                                   echo "&nbsp;&nbsp;&nbsp;第".$p."个影片&nbsp;<font color=red>".$vod_array[4][$key]."</font>&nbsp;&nbsp;数据没有绑定分类，不进行入库处理！<br/>";
 
                                   //判断数据完整性
-					              }elseif(empty($vod_array[4][$key]) || empty($purl)){
+					              }else
+									  if(empty($vod_array[4][$key]) || empty($purl)){
 
 			                                   echo "&nbsp;&nbsp;&nbsp;第".$p."个影片&nbsp;<font color=red>".$vod_array[4][$key]."</font>&nbsp;&nbsp;数据不完整，不进行入库处理！<br/>";
 

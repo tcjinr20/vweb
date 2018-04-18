@@ -114,6 +114,7 @@ class Vod extends Ctcms_Controller {
 		    $data['year'] = date('Y');
 		    $data['info'] = '';
 		    $data['skin'] = 'play.html';
+			$data['torrent'] =0;
 		}else{
 		    $row = $this->csdb->get_row_arr("vod","*",array('id'=>$id)); 
 		    $data['name'] = $row['name']; 
@@ -135,6 +136,7 @@ class Vod extends Ctcms_Controller {
 		    $data['url'] = $row['url']; 
 		    $data['year'] = $row['year']; 
 		    $data['info'] = $row['info']; 
+		    $data['torrent'] =$row['torrent'];
 		}
 		$data['id'] = $id; 
 		//分类

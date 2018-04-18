@@ -46,6 +46,7 @@ var nav_pos = 0;
 var nav_pos_search = 0;
 function loaded(){
 	var scrollset = document.getElementsByClassName('iScroll');
+	if(!scrollset)return
 	var count = 0;
 	for(var i=0; i<scrollset.length; i++){
 		var item = scrollset[i];
@@ -53,7 +54,7 @@ function loaded(){
 			item.id = 'nav_' + count;
 			count++;
 		}
-		tpmyScroll = new iScroll(item.id, {
+		tpmyScroll = new IScroll(item.id, {
 			scrollX : true,
 			scrollY : false,
 			momentum : true,
@@ -72,7 +73,7 @@ function loaded(){
 	}
 }
 if(location.href.indexOf('search') == -1){
-	document.addEventListener('DOMContentLoaded', loaded, false);
+	//document.addEventListener('DOMContentLoaded', loaded, false);
 }
 
 // 获取cookie
